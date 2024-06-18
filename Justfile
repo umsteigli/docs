@@ -1,4 +1,4 @@
-# Serve Slate
+# Alias of 'just serve'
 main: serve
 
 # Pull the docker image
