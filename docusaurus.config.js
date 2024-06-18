@@ -10,6 +10,7 @@ const config = {
     tagline: "Your open-source and modular public transport helper!",
     url: "https://docs.umsteigli.ch",
     baseUrl: "/",
+    trailingSlash: false,
     onBrokenLinks: "throw",
     onBrokenMarkdownLinks: "warn",
     favicon: "img/favicon.ico",
