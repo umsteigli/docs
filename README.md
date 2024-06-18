@@ -1,12 +1,12 @@
 # Umsteigli API Docs
 
-Based on [slate](https://github.com/slatedocs/slate) docs, this will be the Umsteigli API docs.
+Based on [Docusaurus](https://docusaurus.io/) and the [Docusaurus OpenAPI](https://github.com/PaloAltoNetworks/docusaurus-openapi-docs) Plugin, this will be the Umsteigli API docs.
 
 ## Bruno API Collection
 
-The [Bruno](https://www.usebruno.com/) API Collection is located in [api/](api/bruno.json)
+The [Bruno](https://www.usebruno.com/) API Collection is located in [api/](api/bruno.json).
 
-## Slate Documentation
+## Docusaurus Documentation
 
 ### Build Site
 
