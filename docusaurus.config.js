@@ -25,19 +25,15 @@ const config = {
             ({
                 docs: {
                     sidebarPath: require.resolve("./sidebars.js"),
-                    // Please change this to your repo.
-                    // Remove this to remove the "edit this page" links.
                     editUrl:
-                        "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/",
+                        "https://github.com/umsteigli/docs/edit/main/",
                     docLayoutComponent: "@theme/DocPage",
                     docItemComponent: "@theme/ApiItem", // Derived from docusaurus-theme-openapi
                 },
                 blog: {
                     showReadingTime: true,
-                    // Please change this to your repo.
-                    // Remove this to remove the "edit this page" links.
                     editUrl:
-                        "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/",
+                        "https://github.com/umsteigli/docs/edit/main/",
                 },
                 theme: {
                     customCss: require.resolve("./src/css/custom.css"),
@@ -57,7 +53,7 @@ const config = {
             navbar: {
                 title: "Umsteigli",
                 logo: {
-                    alt: "My Site Logo",
+                    alt: "Umsteigli Logo",
                     src: "img/logo.svg",
                 },
                 items: [
@@ -67,7 +63,6 @@ const config = {
                         position: "left",
                         label: "Tutorial",
                     },
-                    { to: "/blog", label: "Blog", position: "left" },
                     {
                         label: "Petstore API",
                         position: "left",
@@ -75,8 +70,9 @@ const config = {
                     },
                     {
                         href: "https://github.com/umsteigli/",
-                        label: "GitHub",
                         position: "right",
+                        className: "header-github-link",
+                        "aria-label": 'GitHub repository',
                     },
                 ],
             },
@@ -113,12 +109,8 @@ const config = {
                         title: "More",
                         items: [
                             {
-                                label: "Blog",
-                                to: "/blog",
-                            },
-                            {
                                 label: "GitHub",
-                                href: "https://github.com/facebook/docusaurus",
+                                href: "https://github.com/umsteigli/",
                             },
                         ],
                     },
@@ -154,7 +146,20 @@ const config = {
         ],
     ],
 
-    themes: ["docusaurus-theme-openapi-docs"],
+    themes: [
+        "docusaurus-theme-openapi-docs",
+        [
+            require.resolve("@easyops-cn/docusaurus-search-local"),
+            ({
+                hashed: true,
+                language: ["en", "de"],
+                indexDocs: true,
+                indexPages: false,
+                indexBlog: false,
+                highlightSearchTermsOnTargetPage: true,
+            })
+        ]
+    ],
 };
 
 module.exports = config;
